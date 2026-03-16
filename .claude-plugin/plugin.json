@@ -1,0 +1,24 @@
+{
+  "name": "venture-capital-intelligence",
+  "description": "9 commands · 3 skills · 6 agents — venture capital intelligence for deal screening, due diligence, financial modeling, cap table waterfall, market sizing, signal sourcing, and fund operations.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Santhosh Gandhi",
+    "email": "isanthoshgandhi@gmail.com"
+  },
+  "homepage": "https://github.com/isanthoshgandhi/venture-capital-intelligence",
+  "license": "MIT",
+  "skills": [
+    "skills/soft-screening-startup",
+    "skills/analyze-pitch-deck",
+    "skills/explain-equity-terms"
+  ],
+  "agents": [
+    "agents/hard-screen-startup",
+    "agents/financial-model",
+    "agents/market-size",
+    "agents/cap-table-waterfall",
+    "agents/deal-sourcing-signals",
+    "agents/fund-operations"
+  ]
+}

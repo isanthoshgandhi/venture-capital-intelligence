@@ -1,0 +1,36 @@
+{
+  "name": "venture-capital-intelligence",
+  "display_name": "Venture Capital Intelligence",
+  "tagline": "The intelligence layer for anyone making or raising capital.",
+  "description": "9 commands · 3 skills · 6 agents built from the best open-source VC tools. Screen startups across 8 dimensions, analyze pitch decks slide-by-slide, explain any equity term in plain English, run DCF + SaaS metrics models, compute cap table dilution and exit waterfalls, size markets with TAM/SAM/SOM, scan companies for deal-sourcing signals, and generate LP fund reports. Works for VCs, founders, angels, PE firms, and family offices.",
+  "version": "1.0.0",
+  "category": "finance",
+  "keywords": [
+    "venture-capital",
+    "investment",
+    "startup",
+    "due-diligence",
+    "financial-modeling",
+    "cap-table",
+    "market-sizing",
+    "deal-sourcing",
+    "fund-operations",
+    "pitch-deck",
+    "term-sheet",
+    "SAFE",
+    "SaaS-metrics",
+    "waterfall",
+    "IRR",
+    "MOIC",
+    "claude-plugin",
+    "claude-code",
+    "anthropic"
+  ],
+  "platforms": ["claude.ai", "claude-code"],
+  "author": {
+    "name": "Santhosh Gandhi",
+    "github": "isanthoshgandhi"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/isanthoshgandhi/venture-capital-intelligence"
+}
