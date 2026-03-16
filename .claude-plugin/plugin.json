@@ -1,6 +1,6 @@
 {
   "name": "venture-capital-intelligence",
-  "description": "3 skills · 6 agents · 9 commands — venture capital intelligence for deal screening, due diligence, financial modeling, cap table waterfall, market sizing, signal sourcing, and fund operations. Built with love & rationality for the venture capital & startup ecosystem.",
+  "description": "3 skills · 6 agents · 9 commands — Screening startups, analyzing pitch decks, explaining equity terms, modeling financials, computing cap table waterfalls, sizing markets, scanning deal signals, and generating LP fund reports. Built with love & rationality for the venture capital & startup ecosystem.",
   "version": "1.0.0",
   "author": {
     "name": "Santhosh Gandhi",
