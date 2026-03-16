@@ -3,17 +3,42 @@
 > **Your complete intelligence layer for venture capital and startups.**
 > Built with love & rationality for the venture capital & startup ecosystem.
 
-A Claude plugin with **3 skills · 6 agents** — built from the best open-source VC tools.
+A Claude plugin with **9 skills** — built from the best open-source VC tools.
 
 Works for: **VCs · Founders · Angels · PE firms · Family offices · Accelerators**
 
+**Author:** Santhosh Gandhi · **Version:** 1.0.0
+
 ---
 
-## Install
+## Try Asking
+
+No commands needed. Just describe what you want — Claude activates the right tool automatically.
+
+```
+■ Should I take a meeting with this B2B SaaS startup? [description]
+■ What does this term sheet clause actually mean for my ownership?
+■ Is the robotics market venture-scale? Give me TAM/SAM/SOM.
+■ Run a hard screen on Zepto — Series D, B2C quick commerce, India.
+■ ARR: $2M, 15% MoM growth, 72% gross margin. What's this worth?
+■ I raised a $500K SAFE at $5M cap, then $2M seed at $8M pre. Who owns what at a $20M exit?
+■ Scan Deel — are they raising again? What signals do you see?
+■ Write my Q1 LP update. Here's my fund data: [values]
+```
+
+---
+
+## Install on Claude Code
 
 ```bash
-claude plugin install isanthoshgandhi/venture-capital-intelligence
+# Step 1 — Add the marketplace (one-time setup)
+claude plugin marketplace add isanthoshgandhi/venture-capital-intelligence
+
+# Step 2 — Install the plugin
+claude plugin install venture-capital-intelligence
 ```
+
+Then just describe what you want — the right skill activates automatically.
 
 ---
 
@@ -134,12 +159,13 @@ You'll get: all standard fund KPIs, carried interest calculation, J-curve positi
 
 ## Two Modes — Which One Should You Use?
 
-| | **Skill (Soft Mode)** | **Agent (Hard Mode)** |
+| | **Soft Mode** | **Hard Mode** |
 |---|---|---|
 | **Works on** | claude.ai + Claude Code | Claude Code only |
 | **How it runs** | Claude reasoning, instant | Python computation + JSON audit trail |
+| **Reproducibility** | ±2–5% variance per run | Identical every run |
 | **Best for** | Quick opinions, exploration | Reproducible models, investment memos |
-| **How to trigger** | Just describe what you want | `/venture-capital-intelligence:[command]` |
+| **How to trigger** | Describe what you want, or `/venture-capital-intelligence:soft-*` | `/venture-capital-intelligence:hard-*` or `/venture-capital-intelligence:[agent-name]` |
 
 ---
 
@@ -172,19 +198,24 @@ venture-capital-intelligence/
 ├── skills/
 │   ├── soft-screening-startup/SKILL.md
 │   ├── analyze-pitch-deck/SKILL.md
-│   └── explain-equity-terms/SKILL.md
-├── agents/
-│   ├── hard-screening-startup.md
+│   ├── explain-equity-terms/SKILL.md
+│   ├── hard-screening-startup/
+│   │   ├── SKILL.md
 │   │   └── scripts/ (verdict_calc.py, report_formatter.py)
-│   ├── financial-model.md
+│   ├── financial-model/
+│   │   ├── SKILL.md
 │   │   └── scripts/ (financial_calc.py, report_formatter.py)
-│   ├── market-size.md
+│   ├── market-size/
+│   │   ├── SKILL.md
 │   │   └── scripts/ (tam_calculator.py, market_formatter.py)
-│   ├── cap-table-waterfall.md
+│   ├── cap-table-waterfall/
+│   │   ├── SKILL.md
 │   │   └── scripts/ (captable_calc.py, waterfall_calc.py, waterfall_formatter.py)
-│   ├── deal-sourcing-signals.md
+│   ├── deal-sourcing-signals/
+│   │   ├── SKILL.md
 │   │   └── scripts/ (signal_scorer.py, sourcing_formatter.py)
-│   └── fund-operations.md
+│   └── fund-operations/
+│       ├── SKILL.md
 │       └── scripts/ (fund_kpi_calc.py, fund_formatter.py)
 └── README.md
 ```
