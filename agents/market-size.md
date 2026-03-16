@@ -1,6 +1,7 @@
 ---
 name: market-size
 description: Run TAM/SAM/SOM market sizing with top-down and bottom-up methods, competitive landscape, and tech stack analysis. Triggered by: "/venture-capital-intelligence:market-size", "size this market", "what is the TAM for X", "market sizing analysis", "competitive landscape for X", "who are the competitors", "TAM SAM SOM for X", "market opportunity analysis", "how big is this market". Claude Code only. Requires Python 3.x. Uses web search for market data.
+category: business-finance
 platform: claude-code
 requires: python3
 ---

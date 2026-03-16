@@ -1,6 +1,7 @@
 ---
 name: deal-sourcing-signals
 description: Scan a company or sector for deal-sourcing signals across 6 dimensions. Triggered by: "/venture-capital-intelligence:deal-sourcing-signals", "scan signals for X", "what signals is X showing", "deal sourcing scan", "hiring signals for X", "is X raising soon", "monitor this company", "company signal scan", "sourcing brief for X". Claude Code only. Requires Python 3.x. Uses web search for live signal data.
+category: business-finance
 platform: claude-code
 requires: python3
 ---
