@@ -3,7 +3,7 @@
 > **Your complete intelligence layer for venture capital and startups.**
 > Built with love & rationality for the venture capital & startup ecosystem.
 
-A Claude plugin with **3 skills · 6 agents** — built from the best open-source VC tools.
+A Claude plugin with **3 Claude Reasoning Only · 6 Claude + Python** — built from the best open-source VC tools.
 
 Works for: **VCs · Founders · Angels · PE firms · Family offices · Accelerators**
 
@@ -12,8 +12,6 @@ Works for: **VCs · Founders · Angels · PE firms · Family offices · Accelera
 ---
 
 ## Try Asking
-
-No commands needed. Just describe what you want — Claude activates the right tool automatically.
 
 ```
 ■ Should I take a meeting with this B2B SaaS startup? [description]
@@ -38,15 +36,13 @@ claude plugin marketplace add isanthoshgandhi/venture-capital-intelligence
 claude plugin install venture-capital-intelligence
 ```
 
-Then just describe what you want — the right skill activates automatically.
-
 ---
 
 ## How to Use
 
 Two ways to trigger any skill:
-1. **Describe it** — Claude auto-activates the right skill from your intent
-2. **Explicit command** — type `/venture-capital-intelligence:[skill-name]` directly
+1. **Explicit command** — type `/venture-capital-intelligence:[skill-name]` directly (recommended)
+2. **Natural language** — describe what you want and Claude will suggest the right command
 
 ---
 

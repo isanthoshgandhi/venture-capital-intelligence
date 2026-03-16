@@ -1,6 +1,6 @@
 {
   "name": "venture-capital-intelligence",
-  "description": "3 skills · 6 agents — Screening startups, analyzing pitch decks, explaining equity terms, modeling financials, computing cap table waterfalls, sizing markets, scanning deal signals, and generating LP fund reports. Built with love & rationality for the venture capital & startup ecosystem.",
+  "description": "3 Claude Reasoning Only · 6 Claude + Python — Screening startups, analyzing pitch decks, explaining equity terms, modeling financials, computing cap table waterfalls, sizing markets, scanning deal signals, and generating LP fund reports. Built with love & rationality for the venture capital & startup ecosystem.",
   "version": "1.0.0",
   "author": {
     "name": "Santhosh Gandhi",
