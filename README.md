@@ -1,10 +1,11 @@
 # Venture Capital Intelligence
 
-> **The intelligence layer for anyone making or raising capital.**
+> **Your complete intelligence layer for venture capital and startups.**
+> Built with love & rationality for the venture capital & startup ecosystem.
 
-A Claude plugin with **3 skills · 6 agents · 9 commands** built from the best open-source VC tools. Screen startups, analyze pitch decks, explain equity terms, model financials, compute cap table waterfalls, size markets, scan deal signals, and generate LP fund reports.
+A Claude plugin with **3 skills · 6 agents · 9 commands** — built from the best open-source VC tools.
 
-Works for VCs, founders, angels, PE firms, and family offices.
+Works for: **VCs · Founders · Angels · PE firms · Family offices · Accelerators**
 
 ---
 
@@ -16,27 +17,20 @@ claude plugin install isanthoshgandhi/venture-capital-intelligence
 
 ---
 
-## Two Modes
+## How to Use
 
-| Mode | How to invoke | Works on | What it does |
-|------|--------------|----------|-------------|
-| **Skill** (soft) | Describe a company or ask a question | claude.ai + Claude Code | Claude reasoning, instant response |
-| **Agent** (hard) | `/venture-capital-intelligence:[command]` | Claude Code only | Python computation + audit trail |
+You don't need to memorize commands. Just describe what you want — Claude will activate the right tool automatically. Or use a `/command` directly if you prefer.
 
 ---
 
-## Skills — Works on claude.ai + Claude Code
+### Evaluating a startup?
+**Describe it and get an 8-dimension score with a PASS / CONDITIONAL PASS / DECLINE verdict.**
 
-| Skill | Command | Triggers automatically when you... |
-|-------|---------|-------------------------------------|
-| **Soft Screening** | `/venture-capital-intelligence:soft-screening-startup` | Describe a startup and ask for an opinion |
-| **Deck Analysis** | `/venture-capital-intelligence:analyze-pitch-deck` | Share a pitch deck and ask for feedback |
-| **Equity Terms** | `/venture-capital-intelligence:explain-equity-terms` | Ask about a SAFE, term sheet, or equity clause |
+> *"Here's a B2B SaaS startup I'm looking at: [description]. Should I take a meeting?"*
 
-### Startup Screen Output (soft mode)
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-STARTUP SCREEN  ·  Acme AI  ·  Seed  ·  B2B SaaS
+STARTUP SCREENING  ·  Acme AI  ·  Seed  ·  B2B SaaS
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 DIMENSION SCORES
@@ -55,37 +49,114 @@ VERDICT:  ✅ PASS
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
----
-
-## Agents — Claude Code Only
-
-| Agent | Command | What it computes |
-|-------|---------|-----------------|
-| **Hard Screen** | `/venture-capital-intelligence:hard-screen-startup` | Deterministic weighted scoring with JSON audit trail |
-| **Financial Model** | `/venture-capital-intelligence:financial-model` | DCF + revenue multiples + SaaS metrics (LTV/CAC, burn multiple, Rule of 40) |
-| **Market Size** | `/venture-capital-intelligence:market-size` | TAM/SAM/SOM top-down + bottom-up, competitive landscape, tech stack analysis |
-| **Cap Table** | `/venture-capital-intelligence:cap-table-waterfall` | SAFE conversion math, dilution simulation, exit waterfall (OCF standard) |
-| **Deal Signals** | `/venture-capital-intelligence:deal-sourcing-signals` | 6-signal scan: Hiring · Funding · Product · Team · Market · Tech |
-| **Fund Operations** | `/venture-capital-intelligence:fund-operations` | TVPI · DPI · IRR · MOIC · carry calculation · LP quarterly narrative |
+- **Quick opinion (claude.ai + Claude Code):** `/venture-capital-intelligence:soft-screening-startup`
+- **Reproducible score with audit trail (Claude Code only):** `/venture-capital-intelligence:hard-screening-startup`
 
 ---
 
-## What's Inside
+### Reviewing a pitch deck?
+**Share the slides and get slide-by-slide scores, red flags, and specific rewrites.**
 
-### Open-Source Foundations
+> *"Here's our pitch deck. Be brutal — tell me what a VC would hate."*
 
-This plugin is built by extracting the best ideas, schemas, formulas, and taxonomies from these open-source tools:
+You'll get: a score for each of the 11 slides, a list of red flags with specific fixes, and a verdict — NOT READY / NEEDS WORK / CLOSE / READY TO SEND.
 
-| Category | Tools Used | What Was Extracted |
-|----------|-----------|-------------------|
-| Startup Scoring | `joelparkerhenderson/startup-assessment`, `virattt/ai-hedge-fund` | 8-dimension rubric, multi-investor lens (Buffett/Wood/Risk/Technical) |
-| Signal Monitoring | `wizenheimer/subsignal` | 6-signal taxonomy: Hiring/Funding/Product/Team/Market/Tech |
-| Financial Modeling | `JerBouma/FinanceToolkit`, `halessi/DCF`, `groveco/cohort-analysis` | DCF formulas, SaaS metrics, cohort/LTV curves |
-| Cap Table | `Open-Cap-Table-Coalition/OCF`, `foresighthq/cap-table-tool` | OCF JSON schema, SAFE conversion math, waterfall logic |
-| Market Research | `enthec/webappanalyzer`, `brightdata/competitive-intelligence` | Tech stack taxonomy, competitive intel agent pattern |
-| Legal/Equity | `YCombinator/safe`, `seriesseed/equity`, `jlevy/og-equity-compensation` | SAFE variants, Series Seed docs, ISO/NSO/vesting guide |
-| Pitch Decks | `julep-ai/pitch-deck-analyzer`, `joelparkerhenderson/pitch-deck`, `rafaecheve/Awesome-Decks` | Red flag taxonomy, 11-slide structure, real deck benchmarks |
-| Fund Ops | `urbantech/musacapital`, `simonmichael/hledger` | LP KPI taxonomy, chart of accounts structure |
+- `/venture-capital-intelligence:analyze-pitch-deck`
+
+---
+
+### Confused by a term sheet or SAFE?
+**Ask any clause in plain English and get the investor and founder perspective.**
+
+> *"What does 'post-money SAFE with a $10M cap and 20% discount' actually mean for my ownership?"*
+> *"What's a 1× non-participating liquidation preference and when does it hurt me?"*
+
+You'll get: plain-English explanation, what it means for the investor, what it means for the founder, and when to push back.
+
+- `/venture-capital-intelligence:explain-equity-terms`
+
+---
+
+### Modeling a company's financials?
+**Input the numbers and get DCF valuation + SaaS metrics (LTV/CAC, burn multiple, Rule of 40).**
+
+> *"ARR: $2M, growing 15% MoM, gross margin 72%, burn $180K/month. What's this worth?"*
+
+You'll get: DCF valuation, revenue multiple range by stage, LTV/CAC ratio, burn multiple, Rule of 40 score, and a plain-English interpretation.
+
+- `/venture-capital-intelligence:financial-model` *(Claude Code only)*
+
+---
+
+### Figuring out your cap table?
+**Input your rounds and SAFEs to see exactly who owns what — and what happens at exit.**
+
+> *"I raised a $500K SAFE at a $5M cap, then a $2M seed at $8M pre. Who owns what? What happens at a $20M exit?"*
+
+You'll get: post-conversion ownership percentages, dilution breakdown by round, and a full waterfall showing how exit proceeds are distributed to each investor class.
+
+- `/venture-capital-intelligence:cap-table-waterfall` *(Claude Code only)*
+
+---
+
+### Sizing a market?
+**Describe the opportunity and get TAM/SAM/SOM with a VC viability check.**
+
+> *"We're targeting independent restaurant owners in the US with a $99/month POS add-on. Is this venture-scale?"*
+
+You'll get: top-down and bottom-up TAM/SAM/SOM estimates, CAGR, a VC viability flag (is TAM > $1B?), and competitive landscape context.
+
+- `/venture-capital-intelligence:market-size` *(Claude Code only)*
+
+---
+
+### Sourcing deals?
+**Scan any company for 6 signal types: Hiring · Funding · Product · Team · Market · Tech.**
+
+> *"Scan Deel and tell me what signals you see — are they raising again?"*
+
+You'll get: a scored signal report across 6 categories, a composite deal signal score, and a recommendation — MONITOR / ENGAGE / MOVE FAST.
+
+- `/venture-capital-intelligence:deal-sourcing-signals` *(Claude Code only)*
+
+---
+
+### Reporting to LPs?
+**Input your fund data and get TVPI, DPI, IRR, MOIC + a ready-to-send quarterly narrative.**
+
+> *"Here's my fund data: [portfolio values, invested capital, distributions]. Write my Q1 LP update."*
+
+You'll get: all standard fund KPIs, carried interest calculation, J-curve position, and a full draft LP narrative ready to send.
+
+- `/venture-capital-intelligence:fund-operations` *(Claude Code only)*
+
+---
+
+## Two Modes — Which One Should You Use?
+
+| | **Skill (Soft Mode)** | **Agent (Hard Mode)** |
+|---|---|---|
+| **Works on** | claude.ai + Claude Code | Claude Code only |
+| **How it runs** | Claude reasoning, instant | Python computation + JSON audit trail |
+| **Best for** | Quick opinions, exploration | Reproducible models, investment memos |
+| **How to trigger** | Just describe what you want | `/venture-capital-intelligence:[command]` |
+
+---
+
+## What's Under the Hood
+
+This plugin extracts the best ideas, schemas, formulas, and taxonomies from open-source VC tools — so you get institutional-grade methods without the complexity:
+
+| What it does | Open-source it's built on |
+|---|---|
+| 8-dimension startup scoring | `joelparkerhenderson/startup-assessment` |
+| 6-signal deal monitoring | `wizenheimer/subsignal` |
+| DCF + SaaS metrics | `JerBouma/FinanceToolkit`, `halessi/DCF` |
+| Cap table + waterfall | `Open-Cap-Table-Coalition/OCF` |
+| Market sizing | `enthec/webappanalyzer`, `brightdata/competitive-intelligence` |
+| SAFE + term sheet knowledge | `YCombinator/safe`, `jlevy/og-equity-compensation` |
+| Pitch deck evaluation | `julep-ai/pitch-deck-analyzer`, `rafaecheve/Awesome-Decks` |
+| Fund KPIs + LP reporting | `urbantech/musacapital` |
 
 ---
 
@@ -101,7 +172,7 @@ venture-capital-intelligence/
 │   ├── analyze-pitch-deck/SKILL.md
 │   └── explain-equity-terms/SKILL.md
 ├── agents/
-│   ├── hard-screen-startup.md
+│   ├── hard-screening-startup.md
 │   │   └── scripts/ (verdict_calc.py, report_formatter.py)
 │   ├── financial-model.md
 │   │   └── scripts/ (financial_calc.py, report_formatter.py)
@@ -118,21 +189,8 @@ venture-capital-intelligence/
 
 ---
 
-## Who This Is For
-
-| User | Primary use cases |
-|------|------------------|
-| **VC Analyst** | Screen 50 startups/week with `/soft-screening-startup`, run hard models on top candidates |
-| **VC Partner** | Quick deck reviews with `/analyze-pitch-deck`, fund performance with `/fund-operations` |
-| **Founder** | "Is my deck ready?" with `/analyze-pitch-deck`, "What am I signing?" with `/explain-equity-terms` |
-| **Angel Investor** | Fast startup screen + cap table scenarios before writing a check |
-| **PE Analyst** | Financial modeling + market sizing for deal evaluation |
-| **Accelerator** | Batch screen 100 demo day companies using the soft screening skill |
-
----
-
 ## License
 
 MIT — free to use, fork, and extend.
 
-Built with love for the startup ecosystem.
+Built with love for the venture capital & startup ecosystem.
