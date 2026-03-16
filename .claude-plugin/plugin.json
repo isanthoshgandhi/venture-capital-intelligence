@@ -8,18 +8,5 @@
   },
   "homepage": "https://github.com/isanthoshgandhi/venture-capital-intelligence",
   "repository": "https://github.com/isanthoshgandhi/venture-capital-intelligence",
-  "license": "MIT",
-  "skills": [
-    "skills/soft-screening-startup",
-    "skills/analyze-pitch-deck",
-    "skills/explain-equity-terms"
-  ],
-  "agents": [
-    "agents/hard-screening-startup",
-    "agents/financial-model",
-    "agents/market-size",
-    "agents/cap-table-waterfall",
-    "agents/deal-sourcing-signals",
-    "agents/fund-operations"
-  ]
+  "license": "MIT"
 }
