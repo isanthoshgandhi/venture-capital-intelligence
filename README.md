@@ -2,7 +2,7 @@
 
 > **The intelligence layer for anyone making or raising capital.**
 
-A Claude plugin with **9 commands · 3 skills · 6 agents** built from the best open-source VC tools. Screen startups, analyze pitch decks, explain equity terms, model financials, compute cap table waterfalls, size markets, scan deal signals, and generate LP fund reports.
+A Claude plugin with **3 skills · 6 agents · 9 commands** built from the best open-source VC tools. Screen startups, analyze pitch decks, explain equity terms, model financials, compute cap table waterfalls, size markets, scan deal signals, and generate LP fund reports.
 
 Works for VCs, founders, angels, PE firms, and family offices.
 
