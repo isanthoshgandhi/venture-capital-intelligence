@@ -57,7 +57,7 @@ If data is partially available, compute what's possible and flag gaps with ⚠.
 
 ## STEP 2 — CLAUDE: PREPARE MODEL INPUTS
 
-Save all inputs to `${CLAUDE_PLUGIN_ROOT}/agents/financial-model/output/model_inputs.json`:
+Save all inputs to `${CLAUDE_PLUGIN_ROOT}/skills/financial-model/output/model_inputs.json`:
 
 ```json
 {
@@ -92,7 +92,7 @@ Derive: if MRR is provided but ARR is not, set `arr = mrr * 12`. If churn is pro
 
 ## STEP 3 — PYTHON: RUN ALL THREE MODELS
 
-Run: `python "${CLAUDE_PLUGIN_ROOT}/agents/financial-model/scripts/financial_calc.py"`
+Run: `python "${CLAUDE_PLUGIN_ROOT}/skills/financial-model/scripts/financial_calc.py"`
 
 This computes:
 1. **DCF Intrinsic Value** — projects free cash flows over 5 years, adds terminal value, discounts at WACC
@@ -117,7 +117,7 @@ Read `model_output.json`. Provide interpretation:
 
 ## STEP 5 — PYTHON: FORMAT FINAL REPORT
 
-Run: `python "${CLAUDE_PLUGIN_ROOT}/agents/financial-model/scripts/report_formatter.py"`
+Run: `python "${CLAUDE_PLUGIN_ROOT}/skills/financial-model/scripts/report_formatter.py"`
 
 ---
 

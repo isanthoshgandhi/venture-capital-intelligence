@@ -41,7 +41,7 @@ Company name | Invested amount | Current fair value | Realized proceeds | Invest
 
 ## STEP 2 — CLAUDE: PREPARE FUND INPUTS
 
-Save to `${CLAUDE_PLUGIN_ROOT}/agents/fund-operations/output/fund_inputs.json`:
+Save to `${CLAUDE_PLUGIN_ROOT}/skills/fund-operations/output/fund_inputs.json`:
 
 ```json
 {
@@ -73,7 +73,7 @@ Save to `${CLAUDE_PLUGIN_ROOT}/agents/fund-operations/output/fund_inputs.json`:
 
 ## STEP 3 — PYTHON: COMPUTE FUND KPIs AND ECONOMICS
 
-Run: `python "${CLAUDE_PLUGIN_ROOT}/agents/fund-operations/scripts/fund_kpi_calc.py"`
+Run: `python "${CLAUDE_PLUGIN_ROOT}/skills/fund-operations/scripts/fund_kpi_calc.py"`
 
 Computes:
 - **TVPI** = (Realized + Unrealized FMV) / Total Invested
@@ -108,7 +108,7 @@ Using fund_output.json, write a 300-word LP quarterly update in the tone of a pr
 
 ## STEP 5 — PYTHON: FORMAT FINAL REPORT
 
-Run: `python "${CLAUDE_PLUGIN_ROOT}/agents/fund-operations/scripts/fund_formatter.py"`
+Run: `python "${CLAUDE_PLUGIN_ROOT}/skills/fund-operations/scripts/fund_formatter.py"`
 
 ---
 

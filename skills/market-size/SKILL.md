@@ -47,7 +47,7 @@ Extract from search results:
 
 ## STEP 3 — CLAUDE: PREPARE SIZING INPUTS
 
-Save to `${CLAUDE_PLUGIN_ROOT}/agents/market-size/output/market_inputs.json`:
+Save to `${CLAUDE_PLUGIN_ROOT}/skills/market-size/output/market_inputs.json`:
 
 ```json
 {
@@ -91,7 +91,7 @@ Save to `${CLAUDE_PLUGIN_ROOT}/agents/market-size/output/market_inputs.json`:
 
 ## STEP 4 — PYTHON: COMPUTE TAM/SAM/SOM
 
-Run: `python "${CLAUDE_PLUGIN_ROOT}/agents/market-size/scripts/tam_calculator.py"`
+Run: `python "${CLAUDE_PLUGIN_ROOT}/skills/market-size/scripts/tam_calculator.py"`
 
 Computes both methods and derives a consensus range. Flags if TAM < $1B (below venture threshold).
 
@@ -118,7 +118,7 @@ This reveals: technical maturity, rebuild risk, hiring difficulty, and migration
 
 ## STEP 6 — PYTHON: FORMAT FINAL REPORT
 
-Run: `python "${CLAUDE_PLUGIN_ROOT}/agents/market-size/scripts/market_formatter.py"`
+Run: `python "${CLAUDE_PLUGIN_ROOT}/skills/market-size/scripts/market_formatter.py"`
 
 ---
 
