@@ -143,20 +143,22 @@ You'll get: all standard fund KPIs, carried interest calculation, J-curve positi
 
 ---
 
-## What's Under the Hood
+## What's Inside
 
-This plugin extracts the best ideas, schemas, formulas, and taxonomies from open-source VC tools — so you get institutional-grade methods without the complexity:
+### Inspired From
 
-| What it does | Open-source it's built on |
-|---|---|
-| 8-dimension startup scoring | `joelparkerhenderson/startup-assessment` |
-| 6-signal deal monitoring | `wizenheimer/subsignal` |
-| DCF + SaaS metrics | `JerBouma/FinanceToolkit`, `halessi/DCF` |
-| Cap table + waterfall | `Open-Cap-Table-Coalition/OCF` |
-| Market sizing | `enthec/webappanalyzer`, `brightdata/competitive-intelligence` |
-| SAFE + term sheet knowledge | `YCombinator/safe`, `jlevy/og-equity-compensation` |
-| Pitch deck evaluation | `julep-ai/pitch-deck-analyzer`, `rafaecheve/Awesome-Decks` |
-| Fund KPIs + LP reporting | `urbantech/musacapital` |
+This plugin is built on the best ideas, schemas, formulas, and taxonomies from the open-source VC ecosystem:
+
+| Category | Inspired From | Learnings |
+|----------|--------------|-----------|
+| Startup Scoring | `joelparkerhenderson/startup-assessment`, `virattt/ai-hedge-fund` | 8-dimension rubric, multi-investor lens (Sequoia/YC/Tiger Global/Risk) |
+| Signal Monitoring | `wizenheimer/subsignal` | 6-signal taxonomy: Hiring · Funding · Product · Team · Market · Tech |
+| Financial Modeling | `JerBouma/FinanceToolkit`, `halessi/DCF`, `groveco/cohort-analysis` | DCF formulas, SaaS metrics, cohort/LTV curves |
+| Cap Table | `Open-Cap-Table-Coalition/OCF`, `foresighthq/cap-table-tool` | OCF JSON schema, SAFE conversion math, waterfall logic |
+| Market Research | `enthec/webappanalyzer`, `brightdata/competitive-intelligence` | Tech stack taxonomy, competitive intel agent pattern |
+| Legal/Equity | `YCombinator/safe`, `seriesseed/equity`, `jlevy/og-equity-compensation` | SAFE variants, Series Seed docs, ISO/NSO/vesting guide |
+| Pitch Decks | `julep-ai/pitch-deck-analyzer`, `joelparkerhenderson/pitch-deck`, `rafaecheve/Awesome-Decks` | Red flag taxonomy, 11-slide structure, real deck benchmarks |
+| Fund Ops | `urbantech/musacapital`, `simonmichael/hledger` | LP KPI taxonomy, chart of accounts structure |
 
 ---
 
