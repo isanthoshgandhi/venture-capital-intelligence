@@ -1,6 +1,6 @@
 {
   "name": "venture-capital-intelligence",
-  "description": "9 skills for venture capital intelligence. 3 run on pure Claude reasoning (claude.ai + Claude Code). 6 run Claude + Python for deterministic, auditable outputs — screening startups, modeling financials, sizing markets, computing cap table waterfalls, scanning deal signals, and generating LP fund reports.",
+  "description": "9 skills for venture capital intelligence. 3 run on pure Claude reasoning. 6 run Claude + Python for deterministic outputs — screening startups, modeling financials, sizing markets, computing cap table waterfalls, scanning deal signals, and generating LP fund reports. Built from the best open-source VC tools.",
   "version": "1.0.0",
   "author": {
     "name": "Santhosh Gandhi",

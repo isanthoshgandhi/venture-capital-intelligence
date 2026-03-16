@@ -3,7 +3,7 @@
 > **Your complete intelligence layer for venture capital and startups.**
 > Built with love & rationality for the venture capital & startup ecosystem.
 
-A Claude plugin with **9 skills** — 3 work on claude.ai · 6 require Claude Code. Built from the best open-source VC tools.
+A Claude plugin with **9 skills** — 3 pure Claude reasoning · 6 Claude + Python scripts. Built from the best open-source VC tools.
 
 Works for: **VCs · Founders · Angels · PE firms · Family offices · Accelerators**
 
