@@ -1,6 +1,6 @@
 ---
 name: cap-table-waterfall
-description: Model cap table dilution, SAFE conversion, and exit waterfall across scenarios. Triggered by: "/venture-capital-intelligence:cap-table-waterfall", "model my cap table", "simulate dilution", "SAFE conversion math", "exit waterfall", "how much do I own after Series A", "liquidation waterfall", "cap table scenario", "what happens to equity at exit", "model the waterfall". Claude Code only. Requires Python 3.x.
+description: Model cap table dilution, SAFE conversion, and exit waterfall across scenarios. Triggered by: "/venture-capital-intelligence:cap-table-waterfall", "model my cap table", "simulate dilution", "SAFE conversion math", "exit waterfall", "how much do I own after Series A", "liquidation waterfall", "cap table scenario", "what happens to equity at exit", "model the waterfall", "how much equity do I have left", "what is my ownership after funding", "run dilution scenarios", "model a new round", "what happens at acquisition", "cap table after SAFE conversion", "pari passu waterfall", "preference stack analysis". Claude Code only. Requires Python 3.x.
 category: business-finance
 platform: claude-code
 requires: python3

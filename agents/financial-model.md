@@ -1,6 +1,6 @@
 ---
 name: financial-model
-description: Run deterministic financial models for startup valuation and SaaS health analysis. Triggered by: "/venture-capital-intelligence:financial-model", "run a financial model on X", "DCF this company", "model the financials", "calculate runway", "what is the valuation", "SaaS metrics model", "LTV CAC analysis", "unit economics", "burn rate analysis", "comparable valuation". Claude Code only. Requires Python 3.x. Accepts user-supplied numbers or searches for publicly available data.
+description: Run deterministic financial models for startup valuation and SaaS health analysis. Triggered by: "/venture-capital-intelligence:financial-model", "run a financial model on X", "DCF this company", "model the financials", "calculate runway", "what is the valuation", "SaaS metrics model", "LTV CAC analysis", "unit economics", "burn rate analysis", "comparable valuation", "how long is my runway", "what's my burn multiple", "revenue projection for X", "model the ARR growth", "what is the pre-money valuation", "comps analysis", "NRR and churn model", "how healthy are these SaaS metrics". Claude Code only. Requires Python 3.x. Accepts user-supplied numbers or searches for publicly available data.
 category: business-finance
 platform: claude-code
 requires: python3
