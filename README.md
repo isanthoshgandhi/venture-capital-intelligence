@@ -44,14 +44,98 @@ Then just describe what you want — the right skill activates automatically.
 
 ## How to Use
 
-You don't need to memorize commands. Just describe what you want — Claude will activate the right tool automatically. Or use a `/command` directly if you prefer.
+Two ways to trigger any skill:
+1. **Describe it** — Claude auto-activates the right skill from your intent
+2. **Explicit command** — type `/venture-capital-intelligence:[skill-name]` directly
 
 ---
 
-### Evaluating a startup?
-**Describe it and get an 8-dimension score with a PASS / CONDITIONAL PASS / DECLINE verdict.**
+## All Skills — Quick Reference
 
-> *"Here's a B2B SaaS startup I'm looking at: [description]. Should I take a meeting?"*
+> 🟢 **Claude Only** = works on claude.ai + Claude Code, instant reasoning
+> 🔵 **Claude + Python** = Claude Code only, runs Python scripts, deterministic output with JSON audit trail
+
+| # | Skill | Explicit Command | What to Pass | Runs On |
+|---|---|---|---|---|
+| 1 | Soft Startup Screen | `/venture-capital-intelligence:soft-screening-startup` | Company name, stage, sector, 2–3 sentence description | 🟢 Claude Only |
+| 2 | Analyze Pitch Deck | `/venture-capital-intelligence:analyze-pitch-deck` | Paste deck text or describe each slide | 🟢 Claude Only |
+| 3 | Explain Equity Terms | `/venture-capital-intelligence:explain-equity-terms` | Paste clause, term, or ask any SAFE/term sheet question | 🟢 Claude Only |
+| 4 | Hard Startup Screen | `/venture-capital-intelligence:hard-screening-startup` | Company name, stage, sector, traction numbers, team background | 🔵 Claude + Python |
+| 5 | Financial Model | `/venture-capital-intelligence:financial-model` | ARR, MoM growth %, gross margin %, burn/month, stage | 🔵 Claude + Python |
+| 6 | Market Size | `/venture-capital-intelligence:market-size` | Target customer, geography, product/price point, sector | 🔵 Claude + Python |
+| 7 | Cap Table Waterfall | `/venture-capital-intelligence:cap-table-waterfall` | SAFE amounts + caps, round sizes + pre-money, exit amount | 🔵 Claude + Python |
+| 8 | Deal Sourcing Signals | `/venture-capital-intelligence:deal-sourcing-signals` | Company name (Claude searches the web for signals) | 🔵 Claude + Python |
+| 9 | Fund Operations | `/venture-capital-intelligence:fund-operations` | Invested capital, portfolio values, distributions, fund size | 🔵 Claude + Python |
+
+---
+
+## Input Examples — Copy & Paste Ready
+
+### 1 — Soft Startup Screen 🟢
+```
+/venture-capital-intelligence:soft-screening-startup
+Company: Acme AI — Seed stage, B2B SaaS, AI-powered contract review.
+Team: Ex-Stripe CTO + Stanford NLP PhD. ARR: $85K, 20% MoM. Should I take a meeting?
+```
+
+### 2 — Analyze Pitch Deck 🟢
+```
+/venture-capital-intelligence:analyze-pitch-deck
+Here's our deck: [paste slide-by-slide content]. Be brutal — what would a VC hate?
+```
+
+### 3 — Explain Equity Terms 🟢
+```
+/venture-capital-intelligence:explain-equity-terms
+What does "post-money SAFE with a $10M cap and 20% discount" mean for my ownership?
+```
+
+### 4 — Hard Startup Screen 🔵
+```
+/venture-capital-intelligence:hard-screening-startup
+Company: Zepto — Series D, B2C quick commerce, India. GMV: $1B, 60% YoY growth.
+Team: IIT Delhi founders, ex-Flipkart ops lead. Competing with Blinkit, Swiggy Instamart.
+```
+
+### 5 — Financial Model 🔵
+```
+/venture-capital-intelligence:financial-model
+ARR: $2M, MoM growth: 15%, Gross margin: 72%, Burn: $180K/month, Stage: Series A.
+CAC: $1,200, LTV: $8,400, Churn: 1.5%/month.
+```
+
+### 6 — Market Size 🔵
+```
+/venture-capital-intelligence:market-size
+Target: Independent restaurant owners in the US. Product: $99/month POS add-on.
+Is this venture-scale? Give me TAM/SAM/SOM.
+```
+
+### 7 — Cap Table Waterfall 🔵
+```
+/venture-capital-intelligence:cap-table-waterfall
+Round 1: $500K SAFE at $5M post-money cap.
+Round 2: $2M Seed at $8M pre-money, 20% option pool.
+Exit: $20M acquisition. Who gets what?
+```
+
+### 8 — Deal Sourcing Signals 🔵
+```
+/venture-capital-intelligence:deal-sourcing-signals
+Company: Deel. Scan for all 6 signal types — are they raising again?
+```
+
+### 9 — Fund Operations 🔵
+```
+/venture-capital-intelligence:fund-operations
+Fund size: $50M, Invested: $32M across 12 companies.
+Portfolio FMV: $61M, Distributions: $4M, Management fees paid: $3M.
+Write my Q1 LP update.
+```
+
+---
+
+## Output Example — Startup Screening
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -73,99 +157,6 @@ DIMENSION SCORES
 VERDICT:  ✅ PASS
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
-
-- **Quick opinion (claude.ai + Claude Code):** `/venture-capital-intelligence:soft-screening-startup`
-- **Reproducible score with audit trail (Claude Code only):** `/venture-capital-intelligence:hard-screening-startup`
-
----
-
-### Reviewing a pitch deck?
-**Share the slides and get slide-by-slide scores, red flags, and specific rewrites.**
-
-> *"Here's our pitch deck. Be brutal — tell me what a VC would hate."*
-
-You'll get: a score for each of the 11 slides, a list of red flags with specific fixes, and a verdict — NOT READY / NEEDS WORK / CLOSE / READY TO SEND.
-
-- `/venture-capital-intelligence:analyze-pitch-deck`
-
----
-
-### Confused by a term sheet or SAFE?
-**Ask any clause in plain English and get the investor and founder perspective.**
-
-> *"What does 'post-money SAFE with a $10M cap and 20% discount' actually mean for my ownership?"*
-> *"What's a 1× non-participating liquidation preference and when does it hurt me?"*
-
-You'll get: plain-English explanation, what it means for the investor, what it means for the founder, and when to push back.
-
-- `/venture-capital-intelligence:explain-equity-terms`
-
----
-
-### Modeling a company's financials?
-**Input the numbers and get DCF valuation + SaaS metrics (LTV/CAC, burn multiple, Rule of 40).**
-
-> *"ARR: $2M, growing 15% MoM, gross margin 72%, burn $180K/month. What's this worth?"*
-
-You'll get: DCF valuation, revenue multiple range by stage, LTV/CAC ratio, burn multiple, Rule of 40 score, and a plain-English interpretation.
-
-- `/venture-capital-intelligence:financial-model` *(Claude Code only)*
-
----
-
-### Figuring out your cap table?
-**Input your rounds and SAFEs to see exactly who owns what — and what happens at exit.**
-
-> *"I raised a $500K SAFE at a $5M cap, then a $2M seed at $8M pre. Who owns what? What happens at a $20M exit?"*
-
-You'll get: post-conversion ownership percentages, dilution breakdown by round, and a full waterfall showing how exit proceeds are distributed to each investor class.
-
-- `/venture-capital-intelligence:cap-table-waterfall` *(Claude Code only)*
-
----
-
-### Sizing a market?
-**Describe the opportunity and get TAM/SAM/SOM with a VC viability check.**
-
-> *"We're targeting independent restaurant owners in the US with a $99/month POS add-on. Is this venture-scale?"*
-
-You'll get: top-down and bottom-up TAM/SAM/SOM estimates, CAGR, a VC viability flag (is TAM > $1B?), and competitive landscape context.
-
-- `/venture-capital-intelligence:market-size` *(Claude Code only)*
-
----
-
-### Sourcing deals?
-**Scan any company for 6 signal types: Hiring · Funding · Product · Team · Market · Tech.**
-
-> *"Scan Deel and tell me what signals you see — are they raising again?"*
-
-You'll get: a scored signal report across 6 categories, a composite deal signal score, and a recommendation — MONITOR / ENGAGE / MOVE FAST.
-
-- `/venture-capital-intelligence:deal-sourcing-signals` *(Claude Code only)*
-
----
-
-### Reporting to LPs?
-**Input your fund data and get TVPI, DPI, IRR, MOIC + a ready-to-send quarterly narrative.**
-
-> *"Here's my fund data: [portfolio values, invested capital, distributions]. Write my Q1 LP update."*
-
-You'll get: all standard fund KPIs, carried interest calculation, J-curve position, and a full draft LP narrative ready to send.
-
-- `/venture-capital-intelligence:fund-operations` *(Claude Code only)*
-
----
-
-## Two Modes — Which One Should You Use?
-
-| | **Soft Mode** | **Hard Mode** |
-|---|---|---|
-| **Works on** | claude.ai + Claude Code | Claude Code only |
-| **How it runs** | Claude reasoning, instant | Python computation + JSON audit trail |
-| **Reproducibility** | ±2–5% variance per run | Identical every run |
-| **Best for** | Quick opinions, exploration | Reproducible models, investment memos |
-| **How to trigger** | Describe what you want, or `/venture-capital-intelligence:soft-*` | `/venture-capital-intelligence:hard-*` or `/venture-capital-intelligence:[agent-name]` |
 
 ---
 
