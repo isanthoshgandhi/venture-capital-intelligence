@@ -51,7 +51,7 @@ Ask for or extract:
 
 ## STEP 2 — CLAUDE: PREPARE INPUTS (OCF-COMPATIBLE)
 
-Save to `${CLAUDE_PLUGIN_ROOT}/skills/cap-table-waterfall/output/captable_inputs.json`:
+Save to `${CLAUDE_PLUGIN_ROOT}/agents/cap-table-waterfall/output/captable_inputs.json`:
 
 ```json
 {
@@ -88,7 +88,7 @@ Save to `${CLAUDE_PLUGIN_ROOT}/skills/cap-table-waterfall/output/captable_inputs
 
 ## STEP 3 — PYTHON: COMPUTE DILUTION AND SAFE CONVERSION
 
-Run: `python "${CLAUDE_PLUGIN_ROOT}/skills/cap-table-waterfall/scripts/captable_calc.py"`
+Run: `python "${CLAUDE_PLUGIN_ROOT}/agents/cap-table-waterfall/scripts/captable_calc.py"`
 
 Computes:
 1. Pre-round cap table (ownership percentages)
@@ -100,7 +100,7 @@ Computes:
 
 ## STEP 4 — PYTHON: RUN EXIT WATERFALL
 
-Run: `python "${CLAUDE_PLUGIN_ROOT}/skills/cap-table-waterfall/scripts/waterfall_calc.py"`
+Run: `python "${CLAUDE_PLUGIN_ROOT}/agents/cap-table-waterfall/scripts/waterfall_calc.py"`
 
 Applies the 4-step waterfall for each exit scenario:
 1. **Return of capital**: Preferred investors get investment back first
@@ -112,7 +112,7 @@ Applies the 4-step waterfall for each exit scenario:
 
 ## STEP 5 — PYTHON: FORMAT FINAL REPORT
 
-Run: `python "${CLAUDE_PLUGIN_ROOT}/skills/cap-table-waterfall/scripts/waterfall_formatter.py"`
+Run: `python "${CLAUDE_PLUGIN_ROOT}/agents/cap-table-waterfall/scripts/waterfall_formatter.py"`
 
 ---
 
