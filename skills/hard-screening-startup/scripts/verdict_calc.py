@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-hard-screen-startup/scripts/verdict_calc.py
+hard-screening-startup/scripts/verdict_calc.py
 Reads company_profile.json, computes weighted score, determines verdict.
 Writes verdict_output.json.
 """

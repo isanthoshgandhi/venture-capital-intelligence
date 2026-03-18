@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-hard-screen-startup/scripts/report_formatter.py
+hard-screening-startup/scripts/report_formatter.py
 Reads verdict_output.json and prints the final formatted terminal report.
 """
 
