@@ -18,7 +18,7 @@ All notable changes to Venture Capital Intelligence are documented here.
 
 **6 Agents (Claude Code only, Python 3.x)**
 
-- **`hard-screen-startup`** — Deterministic startup screening with Python-computed weighted scores, JSON audit trail, and reproducible verdict. Produces `company_profile.json` + `verdict_output.json` for record-keeping.
+- **`hard-screening-startup`** — Deterministic startup screening with Python-computed weighted scores, JSON audit trail, and reproducible verdict. Produces `company_profile.json` + `verdict_output.json` for record-keeping.
 
 - **`financial-model`** — Three-method valuation: DCF intrinsic value (5-year projections with terminal value), revenue multiple (stage-calibrated ARR multiples), and SaaS health metrics (LTV/CAC, CAC payback, burn multiple, NRR, Rule of 40, runway). Stage benchmarks embedded for Seed through Series B.
 
@@ -32,7 +32,7 @@ All notable changes to Venture Capital Intelligence are documented here.
 
 **9 Commands**
 
-`/soft-screening-startup` · `/analyze-pitch-deck` · `/explain-equity-terms` · `/hard-screen-startup` · `/financial-model` · `/market-size` · `/cap-table-waterfall` · `/deal-sourcing-signals` · `/fund-operations`
+`/soft-screening-startup` · `/analyze-pitch-deck` · `/explain-equity-terms` · `/hard-screening-startup` · `/financial-model` · `/market-size` · `/cap-table-waterfall` · `/deal-sourcing-signals` · `/fund-operations`
 
 **Open-Source Tools Incorporated**
 

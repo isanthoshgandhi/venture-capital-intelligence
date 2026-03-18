@@ -189,7 +189,7 @@ COMPARABLES
   [Company B] — [why this comp is relevant]
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-For deterministic Python-scored audit trail: /venture-capital-intelligence:hard-screen-startup
+For deterministic Python-scored audit trail: /venture-capital-intelligence:hard-screening-startup
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
